@@ -51,10 +51,10 @@ body {
             margin-right: 20px;
             font-size: 14px;
         }
-        .gradient{
+        /* .gradient{
             background: linear-gradient(to bottom, #101828, #6a0dad);
             border-radius: 50px;
-        }
+        } */
         /* Previous CSS remains the same until .main-nav */
         .main-nav {
             background-color: #101828;
@@ -312,12 +312,96 @@ body {
             width: 34px;
             height: 34px;
         }
-    .hero-image {
+    /* .hero-image {
         position: relative;
         height: auto;
         width: auto;
         display: flex;
         margin-top: auto;
+    } */
+    .gradient {
+        background: linear-gradient(to bottom, #101828, #6a0dad);
+        border-radius: 50px;
+        position: relative;
+        width: 100%;
+        height: 30%;
+        max-height: 30%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        padding: 0 5%;
+    }
+    
+    .hero-image {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        margin-top: auto;
+    }
+    
+    .hero-image img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+        margin-bottom: -2px;
+    }
+    
+    @media (max-width: 991px) {
+        .gradient {
+            padding: 0 1rem;
+            height: auto;
+            min-height: 100vh;
+        }
+    
+        .hero-image {
+            position: relative;
+            width: 100%;
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            max-height: 50vh;
+        }
+    }
+    
+    @media (min-width: 992px) {
+        .hero-image {
+            position: absolute;
+            bottom: 0;
+            right: 5%;
+            width: 45%;
+        }
+        
+        .hero-image img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            max-height: 75vh;
+            width: auto;
+        }
+    }
+    
+    @media (min-width: 1200px) {
+        .hero-image {
+            width: 40%;
+            right: 8%;
+        }
+    }
+    
+    @media (min-width: 1400px) {
+        .gradient {
+            padding: 0 8%;
+        }
+        
+        .hero-image {
+            width: 35%;
+            right: 12%;
+        }
     }
     /* backer */
     .backer {
